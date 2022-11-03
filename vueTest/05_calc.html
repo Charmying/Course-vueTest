@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+        #app {
+            width: 30%;
+            margin: auto;
+            border: 100px solid #cccccc;
+            text-align: center;
+            pad: 10px;
+        }
+        button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 data-mode="dark">{{title}}</h1>
+        <button v-for="num in 9" :key="num" @click="keyin(num)">{{num}}</button>
+        <button>0</button>
+        {{keyin}}
+        <button @click="reduce">-</button>
+        <button @click="add">+</button>
+        <button @click="calc">=</button>
+        <button @click="clear">C</button>
+        <div>
+            step: {{step}}
+        </div>
+        <h6>result：{{result}}</h6>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    title: "汁咩達人：Adam Tsai",
+                    step: "",
+                    keyin: 0,
+                    result: 0
+                }
+            }
+        }).mount("#app")
+    </script>
+</body>
+</html>

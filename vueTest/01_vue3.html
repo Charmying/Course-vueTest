@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+
+    <div id="app">
+        <!-- 雙括弧是模板語言 -->
+        <!-- 作用域 scope -->
+        <h1>{{ typeof count }}</h1>
+        <hr>
+        <p>{{name}}、{{kind}}來{{food}}</p>
+        <div>{{talk ? "愛講話": "吼呦"}}</div>
+        <div>{{array.length}}</div>
+        <div>{{obj}}</div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        // 新增一個應用 application → 建立 Vue 實體
+        // console.log(Vue)
+        Vue.createApp({
+            data(){
+                return{
+                    count: 1, // number
+                    name: "Jason是瘋狗", // string
+                    kind: "糾察隊長勝翔",
+                    food: "喝酒",
+                    talk: true, // boolean
+                    array: ["TiBaMe","9樓","櫃台"], // array
+                    obj: {introduce: "汁咩大師adam"} // object
+                }
+            }
+        }).mount("#app") // 並掛載 (mount) 在網頁節點上 (id="app")
+    </script>
+    
+</body>
+</html>

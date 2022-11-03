@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue2</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{count}}</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+        // 寫法一
+        new Vue({
+            data: {
+                count: "瘋狗Jason"
+            },
+            el: "#app"
+        })
+
+        // 寫法二
+        // const App = new Vue({
+        //     data: {
+        //         count: "糾察隊長勝翔"
+        //     }
+        // })
+        // App.$mount("#app")
+
+    </script>
+
+    <!-- <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        // console.log(Vue)
+        Vue.createApp({
+            data(){
+                return{
+                    count: 1,
+                    name: "Jason是瘋狗",
+                    kind: "糾察隊長勝翔",
+                    food: "喝酒",
+                    talk: true,
+                    array: ["TiBaMe","9樓","櫃台"],
+                    obj: {introduce: "汁咩大師adam"}
+                }
+            }
+        }).mount("#app")
+    </script> -->
+
+</body>
+</html>
